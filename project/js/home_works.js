@@ -15,22 +15,24 @@ gmailButton.onclick = () => {
     }
 }
 ///part 2
-function moveBlock() {
     const childBlock = document.querySelector('.child_block');
     const parentBlock = document.querySelector('.parent_block');
-    let position = 0;
-    const maxPosition = parentBlock.offsetWidth - childBlock.offsetWidth;
-    let number = 0;
-    const maxCount = 500;
-    function move() {
-        if (position < maxPosition && number < maxCount) {
-            position += 1;
-            childBlock.style.left = `${position}px`;
-            number++;
-            console.log(number);
-            requestAnimationFrame(move);
-        }
+
+    let positionX = 0;
+    let positionY = 0;
+
+    const offsetWidth = parentBlock.clientWidth - childBlock.offsetWidth;
+    const offsetHeight = parentBlock.clientHeight - childBlock.offsetHeight;
+
+    const moveBlock = () => {
+        if(positionX < offsetWidth) positionX ++
+        else if (positionX >= offsetWidth && positionX < offsetHeight) positionY ++
+        else if (positionY >= offsetHeight && positionY < offsetWidth) positionX --
+        if(positionY >= offsetHeight && positionY < offsetHeight) positionY --
+
+
+        childBlock.style.left = `${positionX}px`
+        childBlock.style.top = `${positionY}px`
+        requestAnimationFrame(moveBlock);
     }
-    move();
-}
-document.addEventListener('DOMContentLoaded', moveBlock);
+    moveBlock();

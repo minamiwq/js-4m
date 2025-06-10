@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78b9f2d-10fb-4c68-b6fa-cc659d4fc3c5" name="Changes" comment="change">
+    <list default="true" id="a78b9f2d-10fb-4c68-b6fa-cc659d4fc3c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/js/home_works.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/js/home_works.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo">{
@@ -58,7 +59,9 @@
       <workItem from="1749121418594" duration="869000" />
       <workItem from="1749122317398" duration="1303000" />
       <workItem from="1749123643994" duration="705000" />
-      <workItem from="1749124758668" duration="815000" />
+      <workItem from="1749124758668" duration="1329000" />
+      <workItem from="1749390610706" duration="1436000" />
+      <workItem from="1749557140842" duration="2485000" />
     </task>
     <servers />
   </component>
