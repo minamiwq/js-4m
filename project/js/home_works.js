@@ -15,24 +15,69 @@ gmailButton.onclick = () => {
     }
 }
 ///part 2
-    const childBlock = document.querySelector('.child_block');
-    const parentBlock = document.querySelector('.parent_block');
+const childBlock = document.querySelector('.child_block');
+const parentBlock = document.querySelector('.parent_block');
 
-    let positionX = 0;
-    let positionY = 0;
+let positionX = 0;
+let positionY = 0;
 
-    const offsetWidth = parentBlock.clientWidth - childBlock.offsetWidth;
-    const offsetHeight = parentBlock.clientHeight - childBlock.offsetHeight;
+const offsetWidth = parentBlock.clientWidth - childBlock.offsetWidth;
+const offsetHeight = parentBlock.clientHeight - childBlock.offsetHeight;
 
-    const moveBlock = () => {
-        if(positionX < offsetWidth) positionX ++
-        else if (positionX >= offsetWidth && positionX < offsetHeight) positionY ++
-        else if (positionY >= offsetHeight && positionY < offsetWidth) positionX --
-        if(positionY >= offsetHeight && positionY < offsetHeight) positionY --
+let direction = 'right';
 
+const moveBlock = () => {
+    if (direction === 'right' && positionX < offsetWidth) positionX++;
+    else if (direction === 'right' && positionX >= offsetWidth) direction = 'down';
+    else if (direction === 'down' && positionY < offsetHeight) positionY++;
+    else if (direction === 'down' && positionY >= offsetHeight) direction = 'left';
+    else if (direction === 'left' && positionX > 0) positionX--;
+    else if (direction === 'left' && positionX <= 0) direction = 'up';
+    else if (direction === 'up' && positionY > 0) positionY--;
+    else if (direction === 'up' && positionY <= 0) direction = 'right';
 
-        childBlock.style.left = `${positionX}px`
-        childBlock.style.top = `${positionY}px`
-        requestAnimationFrame(moveBlock);
+    childBlock.style.left = `${positionX}px`;
+    childBlock.style.top = `${positionY}px`;
+
+    requestAnimationFrame(moveBlock);
+}
+moveBlock();
+
+/// timeout
+const startBtn = document.querySelector('#start');
+const stopBtn = document.querySelector('#stop');
+const resetBtn = document.querySelector('#reset');
+const seconds = document.querySelector('#seconds');
+
+let count = 0;
+let interval = null;
+
+const updateDisplay = () => {
+    seconds.textContent = count;
+};
+
+const start = () => {
+    if (!interval) {
+        interval = setInterval(() => {
+            count++;
+            updateDisplay();
+        }, 1000);
     }
-    moveBlock();
+};
+const stop = () => {
+    if (interval) {
+        clearInterval(interval);
+        interval = null;
+    }
+};
+const reset = () => {
+    count = 0;
+    stop();
+    updateDisplay();
+};
+
+startBtn.addEventListener('click', start);
+stopBtn.addEventListener('click', stop);
+resetBtn.addEventListener('click', reset);
+
+updateDisplay();
