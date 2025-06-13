@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78b9f2d-10fb-4c68-b6fa-cc659d4fc3c5" name="Changes" comment="">
+    <list default="true" id="a78b9f2d-10fb-4c68-b6fa-cc659d4fc3c5" name="Changes" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/js/home_works.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/js/home_works.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/js/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/js/lesson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/js/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -61,7 +65,11 @@
       <workItem from="1749123643994" duration="705000" />
       <workItem from="1749124758668" duration="1329000" />
       <workItem from="1749390610706" duration="1436000" />
-      <workItem from="1749557140842" duration="6737000" />
+      <workItem from="1749557140842" duration="7839000" />
+      <workItem from="1749682416005" duration="1888000" />
+      <workItem from="1749686970254" duration="4053000" />
+      <workItem from="1749735581188" duration="4922000" />
+      <workItem from="1749816775496" duration="304000" />
     </task>
     <servers />
   </component>
