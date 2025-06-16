@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Dean",
+    "age": 41,
+    "species": "Человек",
+    "role": "Охотник",
+    "person_photo": "https://ladyholder.com/wp-content/uploads/2018/01/Dean-Winchester.jpg"
+  },
+  {
+    "name": "Sam",
+    "age": 37,
+    "species": "Человек",
+    "role": "Охотник",
+    "person_photo": "https://pm1.aminoapps.com/9080/c23b2febd9e1a8dd11c836bc9bfee49b86a8bba8r1-736-736v2_00.jpg"
+  },
+  {
+    "name": "Castiel",
+    "age": null,
+    "species": "Ангел",
+    "role": "Ангел-хранитель",
+    "person_photo": "https://i.pinimg.com/736x/b1/11/3c/b1113c59f21b2de2c84329218cb8c4ae.jpg"
+  }
+]

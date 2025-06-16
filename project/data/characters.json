@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Kuina",
+    "age": 24,
+    "country": "Japan",
+    "status": "alive",
+    "photo": "https://i.pinimg.com/564x/6a/fc/4d/6afc4db96c424d0438aa3cb36f680f5f.jpg"
+  },
+  {
+    "name": "Chishiya",
+    "age": 25,
+    "country": "Japan",
+    "status": "alive",
+    "photo": "https://i.pinimg.com/originals/c4/8c/02/c48c02f91350b642236e6969cdccb099.jpg"
+  },
+  {
+    "name": "Ann",
+    "age": 27,
+    "country": "Japan",
+    "status": "alive",
+    "photo": "https://i.redd.it/z25h9z48rida1.jpg"
+  }
+]

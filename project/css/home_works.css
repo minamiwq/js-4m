@@ -216,6 +216,11 @@
     text-align: center;
 }
 
+.character-card h3, .character-card span {
+    color: white;
+    font-size: 16px;
+}
+
 .character-photo {
     width: 100%;
     height: 250px;

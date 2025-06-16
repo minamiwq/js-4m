@@ -81,3 +81,49 @@ stopBtn.addEventListener('click', stop);
 resetBtn.addEventListener('click', reset);
 
 updateDisplay();
+
+/// 1
+document.addEventListener('DOMContentLoaded', () => {
+    const characters = document.querySelector('.characters-list');
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../data/persons.json');
+    xhr.setRequestHeader('Accept', 'application/json');
+
+    const userPhoto = 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_640.png';
+
+    xhr.onload = function () {
+        const character = JSON.parse(xhr.responseText);
+        character.forEach(character => {
+            const div = document.createElement('div');
+            div.classList.add('character-card');
+            div.innerHTML = `
+                <div class="character-photo">
+                    <img src="${character.person_photo || userPhoto}" alt="${character.name}" onerror="this.src='${userPhoto}'">
+                </div>
+                <h3>${character.name}</h3>
+                <span><i>Возраст:</i> ${character.age}</span>
+                <span><i>Роль:</i> ${character.role}</span>
+                <span><i>Вид:</i> ${character.species}</span>
+            `;
+            characters.appendChild(div);
+        });
+    };
+    xhr.send();
+});
+
+
+/// 2
+const xhr = new XMLHttpRequest();
+xhr.open('GET', '../data/characters.json');
+xhr.setRequestHeader('Accept', 'application/json');
+xhr.onload = function () {
+    const characters = JSON.parse(xhr.responseText);
+    characters.forEach(character => {
+        console.log(`Name:${character.name}`);
+        console.log(`Age: ${character.age}`);
+        console.log(`Country: ${character.country}`);
+        console.log(`Status: ${character.status}`);
+        console.log(`Photo: ${character.photo}`);
+    });
+};
+xhr.send();
