@@ -57,3 +57,42 @@ setInterval(() => {
     hideTabContent()
     showTabContent(index)
 },3000)
+
+/// Converter
+
+const somInput = document.querySelector('#som')
+const usdInput = document.querySelector('#usd')
+const eurInput = document.querySelector('#eur')
+
+const converter = (element, targetEl1, targetEl2) => {
+    element.oninput = () => {
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', '../data/converter.json')
+        xhr.setRequestHeader('Content-type', 'application/json')
+        xhr.send()
+
+        xhr.onload = () => {
+            const data = JSON.parse(xhr.response)
+            if(element.id === 'som'){
+                targetEl1.value = (element.value / data.usd).toFixed(2)
+                targetEl2.value = (element.value / data.eur).toFixed(2)
+            }
+            if(element.id === 'usd'){
+                targetEl1.value = (element.value * data.usd).toFixed(2)
+                targetEl2.value = (element.value * data.usd / data.eur).toFixed(2)
+            }
+            if(element.id === 'eur'){
+                targetEl1.value = (element.value * data.eur).toFixed(2)
+                targetEl2.value = (element.value * data.eur / data.usd).toFixed(2)
+            }
+
+            if(element.value === ''){
+                targetEl1.value = ''
+                targetEl2.value = ''
+            }
+        }
+    }
+}
+converter(somInput, usdInput, eurInput)
+converter(usdInput, somInput, eurInput)
+converter(eurInput, somInput, usdInput)
